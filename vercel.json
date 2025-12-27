@@ -1,0 +1,10 @@
+{
+  "framework": "vite",
+  "rootDirectory": "my-react-app",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

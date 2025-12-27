@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ===== الألوان الأساسية للعلامة التجارية ===== */
+    --main-sv-color: #448135;           /* اللون الرئيسي - أخضر داكن */
+    --base-sv-color: #59b947;           /* اللون الأساسي - أخضر */
+    --secondary-sv-color: #e1e2e4;      /* اللون الثانوي - بيج فاتح */
+    
+    /* ===== ألوان النصوص ===== */
+    --text-primary: #202020;             /* النص الأساسي */
+    --text-secondary: #333;              /* النص الثانوي */
+    --text-muted: #999;                  /* النص الباهت */
+    --text-light: #6c757d;               /* النص الفاتح */
+    --text-dark: #2c3e50;                /* النص الداكن */
+    --text-medium: #495057;              /* النص المتوسط */
+    --text-white: #fff;                  /* النص الأبيض */
+    --text-black: #000;                  /* النص الأسود */
+    --text-dark-gray: #101010;           /* رمادي داكن جداً */
+    
+    /* ===== ألوان الخلفيات ===== */
+    --bg-white: #EFEFEF;                 /* خلفية رمادية فاتحة */
+    --bg-light: #f8f9fa;                 /* خلفية فاتحة */
+    --bg-lighter: #e9ecef;               /* خلفية أفتح */
+    --bg-gray: #e5e5e5;                  /* خلفية رمادية */
+    --bg-dark-gray: #dbdad7;             /* خلفية رمادية داكنة */
+    --bg-black: #000;                    /* خلفية سوداء */
+    --bg-dark: #171717;                  /* خلفية داكنة */
+    --bg-darker: #272727;                /* خلفية أغمق */
+    --bg-overlay: rgba(0, 0, 0, 0.25);   /* خلفية شفافة داكنة */
+    --bg-overlay-hover: rgba(0, 0, 0, 0.55); /* خلفية شفافة عند hover */
+    --bg-tooltip: #070707;               /* خلفية التلميحات */
+    
+    /* ===== ألوان الحدود ===== */
+    --border-light: #e9ecef;             /* حد فاتح */
+    --border-medium: #dcdcdc;            /* حد متوسط */
+    --border-dark: #d5d5d5;              /* حد داكن */
+    
+    /* ===== ألوان الأزرار ===== */
+    --btn-primary: #007bff;              /* زر أساسي - أزرق */
+    --btn-success: #28a745;              /* زر نجاح - أخضر */
+    --btn-danger: #dc3545;               /* زر خطر - أحمر */
+    --btn-info: #17a2b8;                 /* زر معلومات - سماوي */
+    --btn-warning: #ffc107;              /* زر تحذير - أصفر */
+    --btn-text: #fff;                    /* نص الأزرار */
+    --btn-color: #555555;                /* لون زر افتراضي */
+    
+    /* ===== ألوان الحالات ===== */
+    --color-success: #10B981;            /* لون النجاح */
+    --color-success-hover: #0e8f6b;      /* لون النجاح عند hover */
+    --color-info: #03a9f4;               /* لون المعلومات */
+    --color-link: #1768dd;               /* لون الروابط */
+    
+    /* ===== ألوان التدرجات (Gradients) ===== */
+    --gradient-primary-start: #667eea;   /* بداية التدرج الأساسي */
+    --gradient-primary-end: #764ba2;     /* نهاية التدرج الأساسي */
+    --gradient-info-start: #03a9f4;      /* بداية تدرج المعلومات */
+    --gradient-info-end: #667eea;        /* نهاية تدرج المعلومات */
+    --gradient-light-start: #f8f9fa;     /* بداية تدرج فاتح */
+    --gradient-light-end: #e9ecef;       /* نهاية تدرج فاتح */
+    --gradient-hero-insurance: linear-gradient(135deg, var(--base-sv-color) 0%, var(--secondary-sv-color) 100%); /* تدرج Hero للتأمين */
+    
+    /* ===== ألوان الظلال ===== */
+    --shadow-sm: rgba(0, 0, 0, 0.05);    /* ظل صغير */
+    --shadow-md: rgba(0, 0, 0, 0.08);    /* ظل متوسط */
+    --shadow-lg: rgba(0, 0, 0, 0.1);     /* ظل كبير */
+    --shadow-xl: rgba(0, 0, 0, 0.15);    /* ظل كبير جداً */
+    --shadow-xxl: rgba(0, 0, 0, 0.2);    /* ظل ضخم */
+    --shadow-card: rgba(0, 0, 0, 0.06);  /* ظل البطاقة */
+    --shadow-card-hover: rgba(0, 0, 0, 0.1); /* ظل البطاقة عند hover */
+    
+    /* ===== ألوان خاصة ===== */
+    --color-overlay-dark: #153517;       /* لون overlay داكن */
+    --color-overlay-opacity: rgba(21, 53, 23, 0.2); /* overlay شفاف */
+    --color-overlay-hover: rgba(21, 53, 23, 0.8);   /* overlay عند hover */
+    
+    /* ===== متغيرات RGB للألوان الأساسية (للاستخدام مع rgba) ===== */
+    --main-sv-color-rgb: 68, 129, 53;    /* RGB للون الرئيسي */
+    --base-sv-color-rgb: 89, 185, 71;    /* RGB للون الأساسي */
+    --secondary-sv-color-rgb: 225, 226, 228; /* RGB للون الثانوي */
+    
+    /* ===== إعدادات shadcn/ui ===== */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    direction: rtl;
+    font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+}
